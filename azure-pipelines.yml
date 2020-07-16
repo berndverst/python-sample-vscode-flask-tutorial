@@ -11,13 +11,13 @@ variables:
   azureServiceConnectionId: '6b31d06b-b21f-4185-a9b0-2b598da00925'
   
   # Web app name
-  webAppName: 'buildtesting'
+  webAppName: 'whatthehellisthis'
 
   # Agent VM image name
   vmImageName: 'ubuntu-latest'
 
   # Environment name
-  environmentName: 'buildtesting'
+  environmentName: 'whatthehellisthis'
 
   # Project root folder. Point to the folder containing manage.py file.
   projectRoot: $(System.DefaultWorkingDirectory)
@@ -42,7 +42,6 @@ stages:
         python -m venv antenv
         source antenv/bin/activate
         python -m pip install --upgrade pip
-        pip install wheel
         pip install -r requirements.txt
       workingDirectory: $(projectRoot)
       displayName: "Install requirements"
