@@ -81,8 +81,8 @@ stages:
           - task: AzureAppServiceSettings@1
             inputs:
               azureSubscription: $(azureServiceConnectionId)
-               appName: $(webAppName)
-               appSettings: |
+              appName: $(webAppName)
+              appSettings: |
                 [ { "name": "WEBSITE_RUN_FROM_PACKAGE", "value": "1", "slotSetting": false } ]
 
           - task: AzureWebApp@1
