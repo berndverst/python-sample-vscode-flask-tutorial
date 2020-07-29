@@ -11,7 +11,7 @@ variables:
   azureServiceConnectionId: '418a5b34-cdc2-47dd-81ea-de80552edd25'
   
   # Web app name
-  webAppName: 'calltobetteraction'
+  webAppName: 'appserviceslowness'
 
   # Agent VM image name
   vmImageName: 'ubuntu-latest'
