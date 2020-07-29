@@ -78,13 +78,6 @@ stages:
               versionSpec: '$(pythonVersion)'
             displayName: 'Use Python version'
           
-          - task: AzureAppServiceSettings@1
-            inputs:
-              azureSubscription: $(azureServiceConnectionId)
-              appName: $(webAppName)
-              appSettings: |
-                [ { "name": "WEBSITE_RUN_FROM_PACKAGE", "value": "1", "slotSetting": false } ]
-
           - task: AzureWebApp@1
             displayName: 'Deploy Azure Web App : freebutslow'
             inputs:
